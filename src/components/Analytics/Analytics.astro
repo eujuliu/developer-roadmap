@@ -1,41 +1,13 @@
 ---
 ---
 
-<script src='./analytics.js'></script>
-<script async src='https://www.googletagmanager.com/gtag/js?id=UA-139582634-1'
-></script>
+<script src='./analytics.ts'></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZHDT2S2LF"></script>
 <script is:inline>
-  // @ts-nocheck
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
+    // @ts-nocheck
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-139582634-1');
-
-  document.addEventListener('click', (e) => {
-    let trackEl = e.target;
-    if (!trackEl.getAttribute('ga-category')) {
-      trackEl = trackEl.closest('[ga-category]');
-    }
-
-    if (!trackEl) {
-      return;
-    }
-
-    const category = trackEl.getAttribute('ga-category');
-    const action = trackEl.getAttribute('ga-action');
-    const label = trackEl.getAttribute('ga-label');
-
-    if (!category) {
-      return;
-    }
-
-    window.fireEvent({
-      category,
-      action,
-      label,
-    });
-  });
+    gtag('config', 'G-EZHDT2S2LF');
 </script>

@@ -3,28 +3,19 @@ jsonUrl: '/jsons/roadmaps/java.json'
 pdfUrl: '/pdfs/roadmaps/java.pdf'
 order: 9
 briefTitle: 'Java'
-briefDescription: 'Step by step guide to becoming a Java Developer in 2023'
+briefDescription: 'Step by step guide to becoming a Java Developer in 2025'
 title: 'Java Developer'
-description: 'Step by step guide to becoming a Java developer in 2023'
+description: 'Step by step guide to becoming a Java developer in 2025'
 hasTopics: true
 dimensions:
   width: 968
   height: 1167.29
 schema:
   headline: 'Java Developer Roadmap'
-  description: 'Learn how to become a Java Developer with this interactive step by step guide in 2023. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
+  description: 'Learn how to become a Java Developer with this interactive step by step guide in 2025. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
   imageUrl: 'https://roadmap.sh/roadmaps/java.png'
   datePublished: '2023-01-05'
   dateModified: '2023-01-20'
-sponsor:
-  url: 'https://www.honeycomb.io/resources/platform-engineering-is-the-future-of-ops-thanks?utm_medium=paid-sponsorship&utm_source=insight-partners&utm_campaign=plg_insightpartners_paidsponsorship'
-  title: 'DevOps vs. Platform Ops'
-  imageUrl: 'https://i.imgur.com/kI8YCAA.jpg'
-  description: 'Explore the role of DevOps as platform engineering rises in the software development field.'
-  event:
-    category: 'SponsorClick'
-    action: 'Honeycomb Redirect'
-    label: 'Java / Honeycomb Link'
 seo:
   title: 'Learn to become a modern Java developer'
   description: 'Community driven, articles, resources, guides, interview questions, quizzes for java development. Learn to become a modern Java developer by following the steps, skills, resources and guides listed in this roadmap.'
@@ -65,4 +56,3 @@ tags:
   - 'main-sitemap'
   - 'skill-roadmap'
 ---
-

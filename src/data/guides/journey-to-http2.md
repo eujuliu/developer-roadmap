@@ -1,10 +1,7 @@
 ---
 title: 'Journey to HTTP/2'
 description: 'The evolution of HTTP. How it all started and where we stand today'
-author:
-  name: 'Kamran Ahmed'
-  url: 'https://twitter.com/kamranahmedse'
-  imageUrl: '/authors/kamranahmedse.jpeg'
+authorId: 'kamran'
 seo:
   title: 'Journey to HTTP/2 - roadmap.sh'
   description: 'The evolution of HTTP. How it all started and where we stand today'
@@ -93,11 +90,11 @@ Once the three-way handshake is completed, the data sharing between the client a
 
 However, some implementations of `HTTP/1.0` tried to overcome this issue by introducing a new header called `Connection: keep-alive` which was meant to tell the server "Hey server, do not close this connection, I need it again". But still, it wasn't that widely supported and the problem still persisted.
 
-Apart from being connectionless, `HTTP` also is a stateless protocol i.e. server doesn't maintain the information about the client and so each of the requests has to have the information necessary for the server to fulfill the request on its own without any association with any old requests. And so this adds fuel to the fire i.e. apart from the large number of connections that the client has to open, it also has to send some redundant data on the wire causing increased bandwidth usage.
+Apart from being connection-less, `HTTP` also is a stateless protocol i.e. server doesn't maintain the information about the client and so each of the requests has to have the information necessary for the server to fulfill the request on its own without any association with any old requests. And so this adds fuel to the fire i.e. apart from the large number of connections that the client has to open, it also has to send some redundant data on the wire causing increased bandwidth usage.
 
 ### HTTP/1.1 - 1999
 
-After merely 3 years of `HTTP/1.0`, the next version i.e. `HTTP/1.1` was released in 1999; which made alot of improvements over its predecessor. The major improvements over `HTTP/1.0` included
+After merely 3 years of `HTTP/1.0`, the next version i.e. `HTTP/1.1` was released in 1999; which made a lot of improvements over its predecessor. The major improvements over `HTTP/1.0` included
 
 - **New HTTP methods** were added, which introduced `PUT`, `PATCH`, `OPTIONS`, `DELETE`
 
@@ -125,7 +122,7 @@ After merely 3 years of `HTTP/1.0`, the next version i.e. `HTTP/1.1` was release
 
 I am not going to dwell about all the `HTTP/1.1` features in this post as it is a topic in itself and you can already find a lot about it. The one such document that I would recommend you to read is [Key differences between `HTTP/1.0` and HTTP/1.1](https://www.ra.ethz.ch/cdstore/www8/data/2136/pdf/pd1.pdf) and here is the link to [original RFC](https://tools.ietf.org/html/rfc2616) for the overachievers.
 
-`HTTP/1.1` was introduced in 1999 and it had been a standard for many years. Although, it improved alot over its predecessor; with the web changing everyday, it started to show its age. Loading a web page these days is more resource-intensive than it ever was. A simple webpage these days has to open more than 30 connections. Well `HTTP/1.1` has persistent connections, then why so many connections? you say! The reason is, in `HTTP/1.1` it can only have one outstanding connection at any moment of time. `HTTP/1.1` tried to fix this by introducing pipelining but it didn't completely address the issue because of the **head-of-line blocking** where a slow or heavy request may block the requests behind and once a request gets stuck in a pipeline, it will have to wait for the next requests to be fulfilled. To overcome these shortcomings of `HTTP/1.1`, the developers started implementing the workarounds, for example use of spritesheets, encoded images in CSS, single humongous CSS/Javascript files, [domain sharding](https://www.maxcdn.com/one/visual-glossary/domain-sharding-2/) etc.
+`HTTP/1.1` was introduced in 1999 and it had been a standard for many years. Although, it improved a lot over its predecessor; with the web changing everyday, it started to show its age. Loading a web page these days is more resource-intensive than it ever was. A simple webpage these days has to open more than 30 connections. Well `HTTP/1.1` has persistent connections, then why so many connections? you say! The reason is, in `HTTP/1.1` it can only have one outstanding connection at any moment of time. `HTTP/1.1` tried to fix this by introducing pipelining but it didn't completely address the issue because of the **head-of-line blocking** where a slow or heavy request may block the requests behind and once a request gets stuck in a pipeline, it will have to wait for the next requests to be fulfilled. To overcome these shortcomings of `HTTP/1.1`, the developers started implementing the workarounds, for example use of spritesheets, encoded images in CSS, single humongous CSS/Javascript files, [domain sharding](https://www.maxcdn.com/one/visual-glossary/domain-sharding-2/) etc.
 
 ### SPDY - 2009
 
@@ -162,7 +159,7 @@ By now, you must be convinced that why we needed another revision of the HTTP pr
 
 ##### Frames and Streams
 
-HTTP messages are now composed of one or more frames. There is a `HEADERS` frame for the meta data and `DATA` frame for the payload and there exist several other types of frames (`HEADERS`, `DATA`, `RST_STREAM`, `SETTINGS`, `PRIORITY` etc) that you can check through [the `HTTP/2` specs](https:/http2.github.iohttp2-spec/#FrameTypes).
+HTTP messages are now composed of one or more frames. There is a `HEADERS` frame for the meta data and `DATA` frame for the payload and there exist several other types of frames (`HEADERS`, `DATA`, `RST_STREAM`, `SETTINGS`, `PRIORITY` etc) that you can check through [the `HTTP/2` specs](https://httpwg.org/specs/rfc7540.html#iana-frames).
 
 Every `HTTP/2` request and response is given a unique stream ID and it is divided into frames. Frames are nothing but binary pieces of data. A collection of frames is called a Stream. Each frame has a stream id that identifies the stream to which it belongs and each frame has a common header. Also, apart from stream ID being unique, it is worth mentioning that, any request initiated by client uses odd numbers and the response from server has even numbers stream IDs.
 
@@ -174,7 +171,7 @@ Since `HTTP/2` is now a binary protocol and as I said above that it uses frames 
 
 #### 3. HPACK Header Compression
 
-It was part of a separate RFC which was specifically aimed at optimizing the sent headers. The essence of it is that when we are constantly accessing the server from a same client there is alot of redundant data that we are sending in the headers over and over, and sometimes there might be cookies increasing the headers size which results in bandwidth usage and increased latency. To overcome this, `HTTP/2` introduced header compression.
+It was part of a separate RFC which was specifically aimed at optimizing the sent headers. The essence of it is that when we are constantly accessing the server from a same client there is a lot of redundant data that we are sending in the headers over and over, and sometimes there might be cookies increasing the headers size which results in bandwidth usage and increased latency. To overcome this, `HTTP/2` introduced header compression.
 
 ![Header Compression](https://i.imgur.com/3IPWXvR.png)
 
@@ -200,6 +197,6 @@ There was extensive discussion on whether security (through `TLS`) should be mad
 
 `HTTP/2` is here and it has already [surpassed SPDY in adaption](https://caniuse.com/#search=http2) which is gradually increasing. `HTTP/2` has alot to offer in terms of performance gain and it is about time we should start using it.
 
-For anyone interested in further details here is the [link to specs](https:/http2.github.iohttp2-spec) and a link [demonstrating the performance benefits of `HTTP/2`](https://www.http2demo.io/).
+For anyone interested in further details here is the [link to specs](https://httpwg.org/specs/rfc9113.html) and a link [demonstrating the performance benefits of `HTTP/2`](https://www.http2demo.io/).
 
 And that about wraps it up. Until next time! stay tuned.

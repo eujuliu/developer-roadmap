@@ -1,20 +1,15 @@
-export {};
-
 declare global {
   interface Window {
-    // To selectively enable/disable debug logs
-    __DEBUG__: boolean;
     gtag: any;
-    fireEvent: (props: GAEventType) => void;
+    fireEvent: (props: {
+      action: string;
+      category: string;
+      label?: string;
+      value?: string;
+      callback?: () => void;
+    }) => void;
   }
 }
-
-export type GAEventType = {
-  action: string;
-  category: string;
-  label?: string;
-  value?: string;
-};
 
 /**
  * Tracks the event on google analytics
@@ -22,20 +17,25 @@ export type GAEventType = {
  * @param props Event properties
  * @returns void
  */
-window.fireEvent = (props: GAEventType) => {
-  const { action, category, label, value } = props;
+window.fireEvent = (props) => {
+  const { action, category, label, value, callback } = props;
   if (!window.gtag) {
     console.warn('Missing GTAG - Analytics disabled');
     return;
   }
 
-  if (window.__DEBUG__) {
+  if (import.meta.env.DEV) {
     console.log('Analytics event fired', props);
+    callback?.();
+    return;
   }
 
   window.gtag('event', action, {
     event_category: category,
     event_label: label,
     value: value,
+    ...(callback ? { event_callback: callback } : {}),
   });
 };
+
+export {};

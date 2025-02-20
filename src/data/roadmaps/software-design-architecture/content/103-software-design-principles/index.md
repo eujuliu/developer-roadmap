@@ -16,5 +16,4 @@ By following these design principles, software can be developed in a way that is
 
 Learn more from the following resources:
 
-- [Principles of Software Design](https://www.geeksforgeeks.org/principles-of-software-design/)
-- [Software Design Principles For Beginners](https://www.youtube.com/watch?v=60EqoRcanpo)
+- [@video@Software Design Principles For Beginners](https://www.youtube.com/watch?v=60EqoRcanpo)

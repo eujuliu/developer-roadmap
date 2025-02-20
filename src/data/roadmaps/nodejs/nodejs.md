@@ -1,28 +1,20 @@
 ---
 jsonUrl: '/jsons/roadmaps/nodejs.json'
 pdfUrl: '/pdfs/roadmaps/nodejs.pdf'
+renderer: 'editor'
 order: 6
 briefTitle: 'Node.js'
-briefDescription: 'Step by step guide to becoming a Node.js developer in 2023'
+briefDescription: 'Step by step guide to becoming a Node.js developer in 2025'
 title: 'Node.js Developer'
-description: 'Step by step guide to becoming a modern Node.js developer in 2023'
+description: 'Step by step guide to becoming a modern Node.js developer in 2025'
 isNew: false
 hasTopics: true
 dimensions:
   width: 968
-  height: 2474.06
-sponsor:
-  url: 'https://www.honeycomb.io/blog/building-platform-team?utm_medium=paid-sponsorship&utm_source=insight-partners&utm_campaign=plg_insightpartners_paidsponsorship'
-  title: 'How to Lead a Platform Team'
-  imageUrl: 'https://i.imgur.com/XG7MEWs.jpg'
-  description: 'Master building & executing a top-performing platform engineering team with this guide.'
-  event:
-    category: 'SponsorClick'
-    action: 'Honeycomb Redirect'
-    label: 'Node.js / Honeycomb Link'
+  height: 2380
 schema:
   headline: 'Node.js Roadmap'
-  description: 'Learn Node.js with this interactive step by step guide in 2023. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
+  description: 'Learn Node.js with this interactive step by step guide in 2025. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
   imageUrl: 'https://roadmap.sh/roadmaps/nodejs.png'
   datePublished: '2023-01-05'
   dateModified: '2023-01-20'
@@ -30,12 +22,12 @@ seo:
   title: 'Node.js Developer Roadmap: Learn to become a modern node.js developer'
   description: 'Learn to become a modern node.js developer using this roadmap. Community driven, articles, resources, guides, interview questions, quizzes for modern node.js development.'
   keywords:
-    - 'node.js roadmap 2023'
-    - 'nodejs roadmap 2023'
-    - 'node.js roadmap 2023'
-    - 'nodejs roadmap 2023'
-    - 'node.js developer roadmap 2023'
-    - 'nodejs developer roadmap 2023'
+    - 'node.js roadmap 2024'
+    - 'nodejs roadmap 2024'
+    - 'node.js roadmap 2024'
+    - 'nodejs roadmap 2024'
+    - 'node.js developer roadmap 2024'
+    - 'nodejs developer roadmap 2024'
     - 'guide to becoming a developer'
     - 'guide to becoming a node.js developer'
     - 'guid to becoming a node.js developer'
@@ -79,10 +71,13 @@ seo:
 relatedRoadmaps:
   - 'javascript'
   - 'backend'
+  - 'docker'
   - 'typescript'
   - 'system-design'
   - 'graphql'
   - 'frontend'
+relatedQuestions:
+  - 'javascript'
 sitemap:
   priority: 1
   changefreq: 'monthly'
@@ -91,4 +86,3 @@ tags:
   - 'main-sitemap'
   - 'skill-roadmap'
 ---
-

@@ -1,19 +1,20 @@
 ---
 jsonUrl: '/jsons/roadmaps/software-architect.json'
 pdfUrl: '/pdfs/roadmaps/software-architect.pdf'
+renderer: 'editor'
 order: 8
 briefTitle: 'Software Architect'
-briefDescription: 'Step by step guide to become a Software Architect in 2023'
+briefDescription: 'Step by step guide to become a Software Architect in 2025'
 title: 'Software Architect'
-description: 'Step by step guide to becoming a Software Architect in 2023'
+description: 'Step by step guide to becoming a Software Architect in 2025'
 isNew: false
 hasTopics: true
 dimensions:
   width: 968
-  height: 1882.18
+  height: 2525
 schema:
   headline: 'Software Architect Roadmap'
-  description: 'Learn to become a Software Architect with this interactive step by step guide in 2023. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
+  description: 'Learn to become a Software Architect with this interactive step by step guide in 2025. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
   imageUrl: 'https://roadmap.sh/roadmaps/software-architect.png'
   datePublished: '2023-01-05'
   dateModified: '2023-01-20'
@@ -43,11 +44,11 @@ relatedRoadmaps:
   - 'backend'
   - 'software-design-architecture'
   - 'python'
-  - 'python'
   - 'nodejs'
   - 'golang'
   - 'java'
   - 'devops'
+  - 'engineering-manager'
 sitemap:
   priority: 1
   changefreq: 'monthly'

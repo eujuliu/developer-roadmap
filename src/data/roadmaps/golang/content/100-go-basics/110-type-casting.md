@@ -1,9 +1,8 @@
 # Type Casting
 
-Go doesn't support automatic type conversion, but it allows type casting, which is the process of explicitly changing the variable type. To learn more about typecasting, visit these resources :
+Go doesn't support automatic type conversion, but it allows type casting, which is the process of explicitly changing the variable type.
 
 Visit the following resources to learn more:
 
-- [Geeks for Geeks: Type casting](https://www.geeksforgeeks.org/type-casting-or-type-conversion-in-golang/)
-- [Tour of Go: Type Casting Basics](https://go.dev/tour/basics/13)
-- [Go Docs: Type Casting](https://golangdocs.com/type-casting-in-golang)
+- [@official@Tour of Go: Type Casting Basics](https://go.dev/tour/basics/13)
+- [@article@Go Docs: Type Casting](https://golangdocs.com/type-casting-in-golang)

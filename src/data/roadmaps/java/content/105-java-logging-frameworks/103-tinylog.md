@@ -4,4 +4,5 @@ Tinylog is a lightweight open-source logging framework for Java and Android, opt
 
 Visit the following resources to learn more:
 
-- [Official Website](https://tinylog.org/v1/)
+- [@official@Official Website](https://tinylog.org/v1/)
+- [@official@TinyLog v2](https://tinylog.org/v2/)

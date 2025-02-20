@@ -1,10 +1,7 @@
 ---
 title: 'Basics of Authentication'
 description: 'Learn the basics of Authentication and Authorization'
-author:
-  name: 'Kamran Ahmed'
-  url: 'https://twitter.com/kamranahmedse'
-  imageUrl: '/authors/kamranahmedse.jpeg'
+authorId: 'kamran'
 seo:
   title: 'Basics of Authentication - roadmap.sh'
   description: 'Learn the basics of Authentication and Authorization'
@@ -94,7 +91,7 @@ And in case of authorization failure, i.e., if the user tries to perform an oper
 
 Given below is the list of common authentication strategies:
 
-- Basics of Authentication
+- Basic Authentication
 - Session Based Authentication
 - Token-Based Authentication
 - JWT Authentication

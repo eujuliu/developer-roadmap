@@ -3,26 +3,17 @@ jsonUrl: '/jsons/roadmaps/aspnet-core.json'
 pdfUrl: '/pdfs/roadmaps/aspnet-core.pdf'
 order: 9
 briefTitle: 'ASP.NET Core'
-briefDescription: 'Step by step guide to becoming an ASP.NET Core Developer in 2023'
+briefDescription: 'Step by step guide to becoming an ASP.NET Core Developer in 2025'
 title: 'ASP.NET Core Developer'
-description: 'Step by step guide to becoming an ASP.NET core developer in 2023'
+description: 'Step by step guide to becoming an ASP.NET core developer in 2025'
 isNew: false
 hasTopics: true
 dimensions:
   width: 968
   height: 2773.45
-sponsor:
-  url: 'https://www.honeycomb.io/resources/intercom-accelerates-developer-productivity?utm_medium=paid-sponsorship&utm_source=insight-partners&utm_campaign=plg_insightpartners_paidsponsorship'
-  title: 'Observability Boosts Dev'
-  imageUrl: 'https://i.imgur.com/cEt0VAH.jpg'
-  description: 'Learn how Intercom leveraged observability for developer productivity, delivering better outcomes.'
-  event:
-    category: 'SponsorClick'
-    action: 'Honeycomb Redirect'
-    label: 'ASP.NET Core / Honeycomb Link'
 schema:
   headline: 'ASP.NET Core Developer Roadmap'
-  description: 'Learn how to become a ASP.NET Core Developer with this interactive step by step guide in 2023. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
+  description: 'Learn how to become a ASP.NET Core Developer with this interactive step by step guide in 2025. We also have resources and short descriptions attached to the roadmap items so you can get everything you want to learn in one place.'
   imageUrl: 'https://roadmap.sh/roadmaps/aspnet-core.png'
   datePublished: '2023-01-05'
   dateModified: '2023-01-20'
@@ -66,6 +57,5 @@ sitemap:
 tags:
   - 'roadmap'
   - 'main-sitemap'
-  - 'role-roadmap'
+  - 'skill-roadmap'
 ---
-

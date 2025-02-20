@@ -1,15 +1,18 @@
 ---
-import GuideHeader from '../../components/GuideHeader.astro';
-import MarkdownFile from '../../components/MarkdownFile.astro';
+import GuideContent from '../../components/Guide/GuideContent.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllGuides, GuideFileType } from '../../lib/guide';
+import { getAllGuides, type GuideFileType } from '../../lib/guide';
+import { getOpenGraphImageUrl } from '../../lib/open-graph';
+import { replaceVariables } from '../../lib/markdown';
 
 export interface Props {
   guide: GuideFileType;
 }
 
 export async function getStaticPaths() {
-  const guides = await getAllGuides();
+  const guides = (await getAllGuides()).filter(
+    (guide) => !guide.frontmatter.excludedBySlug,
+  );
 
   return guides.map((guide) => ({
     params: { guideId: guide.id },
@@ -19,7 +22,14 @@ export async function getStaticPaths() {
 
 const { guideId } = Astro.params;
 const { guide } = Astro.props;
-const { frontmatter: guideData } = guide;
+const { frontmatter: guideData, author } = guide;
+
+const ogImageUrl =
+  guideData.seo.ogImageUrl ||
+  getOpenGraphImageUrl({
+    group: 'guide',
+    resourceId: guideId,
+  });
 ---
 
 <BaseLayout
@@ -27,12 +37,9 @@ const { frontmatter: guideData } = guide;
   description={guideData.seo.description}
   permalink={`/guides/${guideId}`}
   canonicalUrl={guideData.canonicalUrl}
+  ogImageUrl={ogImageUrl}
 >
-  <GuideHeader guide={guide} />
+  <GuideContent guide={guide!} />
 
-  <div class='py-5 sm:py-10 max-w-[700px] mx-auto'>
-    <MarkdownFile>
-      <guide.Content />
-    </MarkdownFile>
-  </div>
+  <div slot="changelog-banner" />
 </BaseLayout>
